@@ -14,11 +14,12 @@ class SquadTest {
 
     @AfterEach
     void tearDown() {
+        Squad.clearAllInstances();
     }
 
     @Test
     public Squad setUpNewSquad(){
-        return new Squad("Avengers");
+        return new Squad("Avengers", "Crime");
     }
 
     @Test
@@ -30,7 +31,7 @@ class SquadTest {
     @Test
     void getMembersReturnsAllMembers_true(){
         Squad squad = setUpNewSquad();
-        Squad squad2 = new Squad("Titans");
+        Squad squad2 = new Squad("Titans", "Pollution");
         assertTrue(Squad.getInstances().contains(squad));
         assertTrue(Squad.getInstances().contains(squad2));
     }
@@ -39,5 +40,11 @@ class SquadTest {
     void getId(){
         Squad squad = setUpNewSquad();
         assertEquals(1, squad.getId());
+    }
+
+    @Test
+    void getSquadCause(){
+        Squad squad = setUpNewSquad();
+        assertEquals("Crime", squad.getSquadCause());
     }
 }
