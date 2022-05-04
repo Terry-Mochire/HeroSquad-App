@@ -1,0 +1,26 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    box-sizing: border-box;
+    background-image: url('/images/actionvance-n-2_KHgeAy0-unsplash.jpg');
+    color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+h1 {
+    text-align: center;
+    margin-top: 200px;
+    font-family: 'Caveat', cursive;
+    font-size: 300%;
+}
+.content{
+    font-size: 200%;
+    font-family: 'Lato', sans-serif;
+
+}
+
