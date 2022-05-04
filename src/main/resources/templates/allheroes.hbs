@@ -5,8 +5,9 @@
     <p>Your hero age: {{age}}</p>
     <p>Their Superpower:{{superpower}}</p>
     <p>Their Weakness:{{weakness}}</p>
+    {{#each squads}}
+        <p>They belong to squad: {{squadName}}</p>
+        <p>The {{squadName}} are committed to fighting {{squadCause}}</p>
+    {{/each}}
 {{/each}}
-{{#each squads}}
-    <p>They belong to squad: {{squadName}}</p>
-    <p>The {{squadName}} are committed to fighting {{squadCause}}</p>
-{{/each}}
+
