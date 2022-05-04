@@ -23,4 +23,24 @@ h1 {
     font-family: 'Lato', sans-serif;
 
 }
+.heroes{
+    margin: 30px;
+    position: relative;
+    padding: 30px;
+    border-radius: 70px;
+    background: white;
+    width: 400px;
+    color: black;
+}
+
+.noHero {
+    border-radius: 70px;
+    background: white;
+    margin-top: 200px;
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 400px;
+    padding: 50px;
+    color:black;
+}
 
