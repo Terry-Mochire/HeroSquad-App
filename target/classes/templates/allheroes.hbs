@@ -1,11 +1,25 @@
 {{> layout.hbs}}
-{{#each hero}}
-    <p>Your created Hero: </p>
-    <p>{{name}}</p>
-    <p>{{age}}</p>
-    <p>{{superpower}}</p>
-    <p>{{weakness}}</p>
-{{/each}}
-{{#each squads}}
-    <p>{{squadName}}</p>
-{{/each}}
+
+{{#if hero}}
+    {{#each hero}}
+        <div class="heroes">
+        <p>You created this hero</p>
+        <p>Your hero name: {{name}}</p>
+        <p>Your hero age: {{age}}</p>
+        <p>Their Superpower:{{superpower}}</p>
+        <p>Their Weakness:{{weakness}}</p>
+        {{#if squads}}
+            {{#each squads}}
+                <p>{{name}} belongs to squad {{squadName}}</p>
+                <p>The {{squadName}} are committed to fighting {{squadCause}}</p>
+            {{/each}}
+            {{else}}
+            <p>Have your hero in a squad <a href="/squad/new">here</a></p>
+        {{/if}}
+        </div>
+    {{/each}}
+    {{else}}
+    <p class="noHero">You have not created any hero yet!<br>
+        Create a hero <a href="/heroes/new">Here</a> </p>
+{{/if}}
+
